@@ -1,0 +1,7 @@
+@tailwind components;
+
+@layer components {
+  .header__icons {
+    @apply text-gray-600 h-7 w-7;
+  }
+}

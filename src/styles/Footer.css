@@ -1,0 +1,7 @@
+@tailwind components;
+
+@layer components {
+  .footer__icons {
+    @apply h-8 w-8 object-contain;
+  }
+}
