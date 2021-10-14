@@ -12,54 +12,6 @@ export default function Home() {
       </Head>
       <Layout>
         <MainApp />
-        <h1>somehitng</h1>
-        <h1>somehitng</h1>
-        <h1>somehitng</h1>
-        <h1>somehitng</h1>
-        <h1>somehitng</h1>
-        <h1>somehitng</h1>
-        <h1>somehitng</h1>
-        <h1>somehitng</h1>
-        <h1>somehitng</h1>
-        <h1>somehitng</h1>
-        <h1>somehitng</h1>
-        <h1>somehitng</h1>
-        <h1>somehitng</h1>
-        <h1>somehitng</h1>
-        <h1>somehitng</h1>
-        <h1>somehitng</h1>
-        <h1>somehitng</h1>
-        <h1>somehitng</h1>
-        <h1>somehitng</h1>
-        <h1>somehitng</h1>
-        <h1>somehitng</h1>
-        <h1>somehitng</h1>
-        <h1>somehitng</h1>
-        <h1>somehitng</h1>
-        <h1>somehitng</h1>
-        <h1>somehitng</h1>
-        <h1>somehitng</h1>
-        <h1>somehitng</h1>
-        <h1>somehitng</h1>
-        <h1>somehitng</h1>
-        <h1>somehitng</h1>
-        <h1>somehitng</h1>
-        <h1>somehitng</h1>
-        <h1>somehitng</h1>
-        <h1>somehitng</h1>
-        <h1>somehitng</h1>
-        <h1>somehitng</h1>
-        <h1>somehitng</h1>
-        <h1>somehitng</h1>
-        <h1>somehitng</h1>
-        <h1>somehitng</h1>
-        <h1>somehitng</h1>
-        <h1>somehitng</h1>
-        <h1>somehitng</h1>
-        <h1>somehitng</h1>
-        <h1>somehitng</h1>
-        <h1>somehitng</h1>
-        <h1>somehitng</h1>
       </Layout>
     </React.Fragment>
   );

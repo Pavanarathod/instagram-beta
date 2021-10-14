@@ -1,12 +1,14 @@
 import {
   CameraIcon,
   ChevronRightIcon,
-  HomeIcon,
+  PlusCircleIcon,
+  UserGroupIcon,
   LockClosedIcon,
+  PaperAirplaneIcon,
   SearchIcon,
   HeartIcon,
 } from "@heroicons/react/outline";
-import { XCircleIcon } from "@heroicons/react/solid";
+import { XCircleIcon, HomeIcon } from "@heroicons/react/solid";
 import { useState } from "react";
 const Header = () => {
   const [active, SetActive] = useState(false);
@@ -20,12 +22,12 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-white border border-gray-300 shadow-sm sticky top-0">
-      <main className="lg:max-w-[1000px] lg:mx-auto py-2 px-2 lg:px-0">
+    <header className="bg-white border border-gray-300 shadow-sm sticky top-0 z-50">
+      <main className="lg:max-w-[935px] lg:mx-auto py-2 px-2 lg:px-0">
         <div className="flex items-center justify-between">
           <div className="flex">
             <div className="sm:hidden">
-              <CameraIcon className="header__icons" />
+              <CameraIcon className=" h-7" />
             </div>
             <div className="hidden sm:inline-flex">
               <img src="/images/insta.png" alt="" className="h-8" />
@@ -46,7 +48,7 @@ const Header = () => {
               >
                 <input
                   type="text"
-                  className="bg-gray-100 w-full pl-5 py-1 text-sm focus:outline-none border border-gray-300 rounded-sm"
+                  className="bg-gray-100 w-full pl-5 py-1 text-sm focus:outline-none border border-gray-300 focus:border-gray-700 rounded-sm"
                   placeholder={`${active ? "Search" : ""} `}
                 />
                 {active && (
@@ -68,17 +70,19 @@ const Header = () => {
           </div>
           <div>
             <div className="sm:hidden">
-              <img src="/images/send.png" className="h-7" />
+              {/* <img src="/images/send.png" className="h-7" /> */}
+              <PaperAirplaneIcon className=" h-7 rotate-45" />
             </div>
             <div className="hidden sm:flex sm:items-center sm:space-x-4">
               <HomeIcon className="header__icons" />
-              <img src="/images/send.png" alt="" className="h-5" />
-              <img src="/images/navigation.png" alt="" className="h-5" />
+              <PaperAirplaneIcon className="header__icons rotate-45" />
+              <PlusCircleIcon className="header__icons" />
+              <UserGroupIcon className="header__icons" />
               <HeartIcon className="header__icons" />
               <img
                 src="/images/avatar.png"
-                alt=""
-                className="h-5 w-5 rounded-full"
+                alt="img"
+                className="h-7 rounded-full"
               />
             </div>
           </div>

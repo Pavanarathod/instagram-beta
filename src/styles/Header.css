@@ -2,6 +2,6 @@
 
 @layer components {
   .header__icons {
-    @apply text-gray-600 h-7 w-7;
+    @apply text-gray-800 h-5 cursor-pointer w-5 hover:scale-125 transition-all duration-150 ease-out;
   }
 }
