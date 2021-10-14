@@ -2,6 +2,6 @@
 
 @layer components {
   .post__icons {
-    @apply h-7 text-gray-700 cursor-pointer active:text-red-300 active:scale-125 transition-all duration-150 ease-out;
+    @apply h-6 text-gray-700 cursor-pointer active:text-red-300 active:scale-125 transition-all duration-150 ease-out;
   }
 }

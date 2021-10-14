@@ -5,12 +5,14 @@ import {
   ChatIcon,
   PaperAirplaneIcon,
   BookmarkIcon,
+  EmojiSadIcon,
+  EmojiHappyIcon,
 } from "@heroicons/react/outline";
 
 const PostCard = ({ id, username, userImage, postImage, caption }) => {
   return (
-    <div className="bg-white py-3 border border-gray-300">
-      <div className="flex justify-between items-center py-2 px-3">
+    <div className="bg-white border border-gray-300 rounded-sm">
+      <div className="flex justify-between items-center px-3 py-3">
         <div className="flex items-center space-x-3">
           <img
             src={userImage}
@@ -36,7 +38,25 @@ const PostCard = ({ id, username, userImage, postImage, caption }) => {
           <BookmarkIcon className="post__icons" />
         </div>
       </div>
-      {/* captions */}
+
+      <div className="px-3 pb-3">
+        <p className="truncate">
+          <span className="mr-2 font-bold">{username}</span>
+          {caption}
+        </p>
+      </div>
+
+      <form className="py-2 px-3 border-t border-gray-300">
+        <div className="flex items-center w-full">
+          <EmojiHappyIcon className="post__icons" />
+          <input
+            type="text"
+            placeholder="Add a comment"
+            className="flex-1 px-3 py-2 focus:outline-none font-mono"
+          />
+          <span className="font-semibold text-blue-500">Post</span>
+        </div>
+      </form>
     </div>
   );
 };

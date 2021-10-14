@@ -8,7 +8,7 @@ const Posts = () => {
       userImage: "https://links.papareact.com/3ke",
       postImage: "https://links.papareact.com/3ke",
       caption:
-        "Building the instagram clone with nextjs and reactjs with google fireabse",
+        "Building the instagram clone with nextjs and reactjs with google fireabse lolololollllllllllllllllllll",
     },
 
     {
@@ -17,7 +17,7 @@ const Posts = () => {
       userImage: "https://links.papareact.com/3ke",
       postImage: "https://links.papareact.com/3ke",
       caption:
-        "Building the instagram clone with nextjs and reactjs with google fireabse",
+        "Building the instagram clone with nextjs and reactjs with google fireabse lolololollllllllllllllllllll",
     },
     {
       id: 1,
@@ -25,7 +25,7 @@ const Posts = () => {
       userImage: "https://links.papareact.com/3ke",
       postImage: "https://links.papareact.com/3ke",
       caption:
-        "Building the instagram clone with nextjs and reactjs with google fireabse",
+        "Building the instagram clone with nextjs and reactjs with google fireabse lolololollllllllllllllllllll",
     },
     {
       id: 1,
@@ -33,7 +33,7 @@ const Posts = () => {
       userImage: "https://links.papareact.com/3ke",
       postImage: "https://links.papareact.com/3ke",
       caption:
-        "Building the instagram clone with nextjs and reactjs with google fireabse",
+        "Building the instagram clone with nextjs and reactjs with google fireabse lolololollllllllllllllllllll",
     },
     {
       id: 1,
@@ -41,7 +41,7 @@ const Posts = () => {
       userImage: "https://links.papareact.com/3ke",
       postImage: "https://links.papareact.com/3ke",
       caption:
-        "Building the instagram clone with nextjs and reactjs with google fireabse",
+        "Building the instagram clone with nextjs and reactjs with google fireabse lolololollllllllllllllllllll",
     },
     {
       id: 1,
@@ -49,7 +49,7 @@ const Posts = () => {
       userImage: "https://links.papareact.com/3ke",
       postImage: "https://links.papareact.com/3ke",
       caption:
-        "Building the instagram clone with nextjs and reactjs with google fireabse",
+        "Building the instagram clone with nextjs and reactjs with google fireabse lolololollllllllllllllllllll",
     },
     {
       id: 1,
@@ -57,7 +57,7 @@ const Posts = () => {
       userImage: "https://links.papareact.com/3ke",
       postImage: "https://links.papareact.com/3ke",
       caption:
-        "Building the instagram clone with nextjs and reactjs with google fireabse",
+        "Building the instagram clone with nextjs and reactjs with google fireabse lolololollllllllllllllllllll",
     },
   ];
 
