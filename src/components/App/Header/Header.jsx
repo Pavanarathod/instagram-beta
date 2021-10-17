@@ -19,6 +19,7 @@ import { modalActions } from "../../../redux/reducers/modalSlice";
 const Header = () => {
   const dispatch = useDispatch();
   const { data: session } = useSession();
+
   const [active, SetActive] = useState(false);
 
   const setActiveInput = () => {

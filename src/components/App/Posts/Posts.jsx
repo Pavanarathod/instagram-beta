@@ -1,71 +1,25 @@
+import useFirebaseCollection from "../../../hooks/useFirebaseCollection";
+import Spinner from "../Spinner/Spinner";
 import PostCard from "./PostCard";
 
 const Posts = () => {
-  const dummyPosts = [
-    {
-      id: 1,
-      username: "pavan rathod",
-      userImage: "https://links.papareact.com/3ke",
-      postImage: "https://links.papareact.com/3ke",
-      caption:
-        "Building the instagram clone with nextjs and reactjs with google fireabse lolololollllllllllllllllllll",
-    },
-
-    {
-      id: 1,
-      username: "pavan rathod",
-      userImage: "https://links.papareact.com/3ke",
-      postImage: "https://links.papareact.com/3ke",
-      caption:
-        "Building the instagram clone with nextjs and reactjs with google fireabse lolololollllllllllllllllllll",
-    },
-    {
-      id: 1,
-      username: "pavan rathod",
-      userImage: "https://links.papareact.com/3ke",
-      postImage: "https://links.papareact.com/3ke",
-      caption:
-        "Building the instagram clone with nextjs and reactjs with google fireabse lolololollllllllllllllllllll",
-    },
-    {
-      id: 1,
-      username: "pavan rathod",
-      userImage: "https://links.papareact.com/3ke",
-      postImage: "https://links.papareact.com/3ke",
-      caption:
-        "Building the instagram clone with nextjs and reactjs with google fireabse lolololollllllllllllllllllll",
-    },
-    {
-      id: 1,
-      username: "pavan rathod",
-      userImage: "https://links.papareact.com/3ke",
-      postImage: "https://links.papareact.com/3ke",
-      caption:
-        "Building the instagram clone with nextjs and reactjs with google fireabse lolololollllllllllllllllllll",
-    },
-    {
-      id: 1,
-      username: "pavan rathod",
-      userImage: "https://links.papareact.com/3ke",
-      postImage: "https://links.papareact.com/3ke",
-      caption:
-        "Building the instagram clone with nextjs and reactjs with google fireabse lolololollllllllllllllllllll",
-    },
-    {
-      id: 1,
-      username: "pavan rathod",
-      userImage: "https://links.papareact.com/3ke",
-      postImage: "https://links.papareact.com/3ke",
-      caption:
-        "Building the instagram clone with nextjs and reactjs with google fireabse lolololollllllllllllllllllll",
-    },
-  ];
+  const [userPosts, loading] = useFirebaseCollection();
 
   return (
     <div className="mt-8 space-y-4">
-      {dummyPosts.map((post, index) => (
-        <PostCard key={index} {...post} />
-      ))}
+      {loading && <Spinner status={loading} />}
+      {userPosts.map(
+        ({ id, data: { caption, postImage, profileImage, username } }) => (
+          <PostCard
+            key={id}
+            username={username}
+            postImage={postImage}
+            userImage={profileImage}
+            caption={caption}
+            id={id}
+          />
+        )
+      )}
     </div>
   );
 };

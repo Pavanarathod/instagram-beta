@@ -153,7 +153,7 @@ const Modal = () => {
               </div>
               <div className="mt-4 w-full">
                 <button
-                  // disabled={!selectedFile}
+                  disabled={!selectedFile}
                   onClick={uploadPost}
                   type="button"
                   className="bg-red-600 w-full py-2 text-white rounded-lg disabled:cursor-not-allowed disabled:bg-red-400"
