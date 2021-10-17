@@ -9,8 +9,12 @@ import {
   HeartIcon,
 } from "@heroicons/react/outline";
 import { XCircleIcon, HomeIcon } from "@heroicons/react/solid";
+import { signIn, useSession } from "next-auth/react";
 import { useState } from "react";
+
 const Header = () => {
+  const { data: session } = useSession();
+  console.log(session);
   const [active, SetActive] = useState(false);
 
   const setActiveInput = () => {
@@ -41,32 +45,34 @@ const Header = () => {
                 className="h-11 object-contain"
               />
             </div>
-            <div className="hidden sm:inline-flex">
-              <form
-                className="flex items-center relative"
-                onClick={setActiveInput}
-              >
-                <input
-                  type="text"
-                  className="bg-gray-100 w-full pl-5 py-1 text-sm focus:outline-none border border-gray-300 focus:border-gray-700 rounded-sm"
-                  placeholder={`${active ? "Search" : ""} `}
-                />
-                {active && (
-                  <div
-                    onClick={setDefaultValue}
-                    className="flex items-center absolute space-x-1 right-0 px-2"
-                  >
-                    <XCircleIcon className="h-3 text-gray-400 cursor-pointer" />
-                  </div>
-                )}
-                {!active && (
-                  <div className="flex items-center absolute space-x-1 right-20">
-                    <SearchIcon className="h-3 text-gray-400" />
-                    <span className="text-sm text-gray-400">search</span>
-                  </div>
-                )}
-              </form>
-            </div>
+            {session && (
+              <div className="hidden sm:inline-flex">
+                <form
+                  className="flex items-center relative"
+                  onClick={setActiveInput}
+                >
+                  <input
+                    type="text"
+                    className="bg-gray-100 w-full pl-5 py-1 text-sm focus:outline-none border border-gray-300 focus:border-gray-700 rounded-sm"
+                    placeholder={`${active ? "Search" : ""} `}
+                  />
+                  {active && (
+                    <div
+                      onClick={setDefaultValue}
+                      className="flex items-center absolute space-x-1 right-0 px-2"
+                    >
+                      <XCircleIcon className="h-3 text-gray-400 cursor-pointer" />
+                    </div>
+                  )}
+                  {!active && (
+                    <div className="flex items-center absolute space-x-1 right-20">
+                      <SearchIcon className="h-3 text-gray-400" />
+                      <span className="text-sm text-gray-400">search</span>
+                    </div>
+                  )}
+                </form>
+              </div>
+            )}
           </div>
           <div>
             <div className="sm:hidden">
@@ -75,15 +81,26 @@ const Header = () => {
             </div>
             <div className="hidden sm:flex sm:items-center sm:space-x-4">
               <HomeIcon className="header__icons" />
-              <PaperAirplaneIcon className="header__icons rotate-45" />
-              <PlusCircleIcon className="header__icons" />
-              <UserGroupIcon className="header__icons" />
-              <HeartIcon className="header__icons" />
-              <img
-                src="/images/avatar.png"
-                alt="img"
-                className="h-7 rounded-full"
-              />
+              {session ? (
+                <>
+                  <PaperAirplaneIcon className="header__icons rotate-45" />
+                  <PlusCircleIcon className="header__icons" />
+                  <UserGroupIcon className="header__icons" />
+                  <HeartIcon className="header__icons" />
+                  <img
+                    src={session?.user?.image}
+                    alt="img"
+                    className="h-7 rounded-full"
+                  />
+                </>
+              ) : (
+                <p
+                  className="font-semibold text-sm cursor-pointer"
+                  onClick={signIn}
+                >
+                  Sign in
+                </p>
+              )}
             </div>
           </div>
         </div>

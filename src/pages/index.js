@@ -10,7 +10,7 @@ export default function Home() {
         <title>instagram beta</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Layout>
+      <Layout applyGrid>
         <MainApp />
       </Layout>
     </React.Fragment>
