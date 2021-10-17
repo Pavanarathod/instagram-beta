@@ -8,13 +8,17 @@ import {
   SearchIcon,
   HeartIcon,
 } from "@heroicons/react/outline";
+
 import { XCircleIcon, HomeIcon } from "@heroicons/react/solid";
 import { signIn, useSession } from "next-auth/react";
 import { useState } from "react";
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { modalActions } from "../../../redux/reducers/modalSlice";
 
 const Header = () => {
+  const dispatch = useDispatch();
   const { data: session } = useSession();
-  console.log(session);
   const [active, SetActive] = useState(false);
 
   const setActiveInput = () => {
@@ -23,6 +27,10 @@ const Header = () => {
 
   const setDefaultValue = () => {
     SetActive(false);
+  };
+
+  const enable = () => {
+    dispatch(modalActions.enableModal());
   };
 
   return (
@@ -84,7 +92,7 @@ const Header = () => {
               {session ? (
                 <>
                   <PaperAirplaneIcon className="header__icons rotate-45" />
-                  <PlusCircleIcon className="header__icons" />
+                  <PlusCircleIcon onClick={enable} className="header__icons" />
                   <UserGroupIcon className="header__icons" />
                   <HeartIcon className="header__icons" />
                   <img
