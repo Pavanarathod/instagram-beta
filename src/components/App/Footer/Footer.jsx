@@ -1,4 +1,4 @@
-import { HeartIcon, PlusCircleIcon } from "@heroicons/react/outline";
+import { HeartIcon, LoginIcon, PlusCircleIcon } from "@heroicons/react/outline";
 import { HomeIcon, SearchIcon } from "@heroicons/react/solid";
 import { signIn, useSession } from "next-auth/react";
 import { useDispatch } from "react-redux";
@@ -25,13 +25,12 @@ const Footer = () => {
           />
         </div>
       ) : (
-        <div className="flex justify-center items-center py-2">
-          <button
-            onClick={signIn}
-            className="px-5 py-3 text-xs bg-gray-900 rounded-lg focus:outline-none text-white"
-          >
-            sign in to instagram
-          </button>
+        <div className="flex justify-between items-center px-2 py-2">
+          <img src="/images/insta.png" alt="" className="h-14" />
+          <div className="flex items-center space-x-2" onClick={signIn}>
+            <span className="font-bold">sign in for more</span>
+            <LoginIcon className="h-10 text-gray-800 " />
+          </div>
         </div>
       )}
     </footer>

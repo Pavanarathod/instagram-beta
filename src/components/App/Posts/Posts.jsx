@@ -6,7 +6,7 @@ const Posts = () => {
   const [userPosts, loading] = useFirebaseCollection();
 
   return (
-    <div className="mt-8 space-y-4">
+    <div className="mt-8 space-y-4 mb-16 sm:mb-8">
       {loading && <Spinner status={loading} />}
       {userPosts.map(
         ({ id, data: { caption, postImage, profileImage, username } }) => (
